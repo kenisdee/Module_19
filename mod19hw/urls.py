@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from task1.views import create_records
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('create-records/', create_records, name='create_records'),
 ]
