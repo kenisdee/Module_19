@@ -1,0 +1,22 @@
+{% extends 'menu.html' %}
+
+{% block pagename %}
+Корзина
+{% endblock %}
+
+{% block content %}
+<h1>Корзина</h1>
+{% if data.selected_games_list %}
+    <p>Здесь вы можете просмотреть выбранные игры и их общую стоимость.</p>
+    <ul>
+        {% for game in data.selected_games_list %}
+        <li>
+            {{ game.name }} - {{ game.price }}
+        </li>
+        {% endfor %}
+    </ul>
+    <p>Общая стоимость: {{ data.total_price }}$</p>
+{% else %}
+    <p>Ваша корзина пуста.</p>
+{% endif %}
+{% endblock %}

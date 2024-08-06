@@ -6,4 +6,37 @@
 <body>
     <h1>{{ message }}</h1>
 </body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Records</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .message {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .success {
+            color: #4CAF50;
+        }
+        .error {
+            color: #F44336;
+        }
+    </style>
+</head>
+<body>
+    <div class="message {% if 'Error' in message %}error{% else %}success{% endif %}">
+        <h1>Create Records Result</h1>
+        <p>{{ message }}</p>
+    </div>
+</body>
 </html>

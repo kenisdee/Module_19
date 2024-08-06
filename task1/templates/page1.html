@@ -1,0 +1,18 @@
+{% extends 'menu.html' %}
+
+{% block pagename %}
+Каталог игр
+{% endblock %}
+
+{% block content %}
+<h1>Каталог игр</h1>
+<p>Откройте для себя лучшие предложения на игры. Здесь вы найдете игры на любой вкус и бюджет.</p>
+<ul>
+    {% for game in games_list %}
+    <li>
+        {{ game.title }} | {{ game.description }}. Стоимость: {{ game.cost }}
+        <button>Купить</button>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

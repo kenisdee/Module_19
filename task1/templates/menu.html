@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ pagename }}</title>
+</head>
+<body>
+    <header>
+        <h1>{{ pagename }}</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Главная</a></li>
+            <li><a href="{% url 'page1' %}">Каталог игр</a></li>
+            <li><a href="{% url 'page2' %}">Корзина</a></li>
+        </ul>
+    </nav>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
